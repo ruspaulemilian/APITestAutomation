@@ -20,7 +20,7 @@ Feature: The Jira User Story
 
 
   Scenario: Verify that updating user details with an invalid token is not possible
-    When I want to modify the user details using details from the json file 'jsonInputData.json'
+    When I want to modify the user details using details from the json file 'jsonInputDataInvalidToken.json'
     Then The status code is 403
     And Response includes the following
       | error       | 52                 |
@@ -29,7 +29,7 @@ Feature: The Jira User Story
       | ms          | 66                 |
 
   Scenario: Verify that updating user details with no token is not possible
-    When I want to modify the user details using details from the json file 'jsonInputData.json'
+    When I want to modify the user details using details from the json file 'jsonInputDataNoToken.json'
     Then The status code is 403
     And Response includes the following
       | error       | 53               |
