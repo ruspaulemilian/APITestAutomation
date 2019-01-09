@@ -1,6 +1,7 @@
 Feature: The Jira User Story
 
-  Background: Given The application is up and running
+  Background:
+    Given The application is up and running
 
   Scenario: Successfully modify details on the user
     When I want to modify the user details using details from the json file 'jsonInputData.json'

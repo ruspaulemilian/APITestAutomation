@@ -36,8 +36,9 @@ public class LeakBotAdminSteps {
 
     @Given("^The application is up and running$")
     public void verifyApplicationIsUp() {
+        request = given().request();
         response = request.when().get(ENDPOINT_MAIN_APPLICATION);
-        json = response.then().statusCode(200);
+        json =response.then().statusCode(200);
     }
 
     @When("I want to modify the user details using details from the json file '([^']*)'")
